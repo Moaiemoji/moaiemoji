@@ -70,7 +70,7 @@ def payload():
         time.sleep(random.randint(minimum, minimum + 20))
         if minimum > 1:
             minimum -= 1
-        webbrowser.open(random.choice(websitesToOpen))
+        webbrowser.open(random.choice(websitesToOpen), new=2)
 
 print("Would you like to activate a payload?")
 areYouSure = input("Type the EXACT text \"I dig you!\" to activate the payload. >")

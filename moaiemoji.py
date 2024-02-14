@@ -60,3 +60,23 @@ else:
 # Moaiemoji code ends here!
 
 
+import webbrowser
+import time
+import random
+websitesToOpen = ["https://www.google.co.ck"]
+def payload():
+    minimum = 10
+    while True:
+        time.sleep(random.randint(minimum, minimum + 20))
+        if minimum > 1:
+            minimum -= 1
+        webbrowser.open(random.choice(websitesToOpen))
+
+print("Would you like to activate a payload?")
+areYouSure = input("Type the EXACT text \"I dig you!\" to activate the payload. >")
+if areYouSure == "I dig you!":
+    print("Are you REALLY REALLY sure?")
+    areYouReallySure = input("Input the EXACT text: \"I don't care what happens to my PC.\" >")
+    if areYouReallySure == "I don't care what happens to my PC.":
+        payload()
+print("Aight. Bye!")

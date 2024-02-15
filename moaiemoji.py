@@ -65,15 +65,16 @@ import time
 import random
 import sys
 
-websitesToOpen = ["https://www.google.co.ck/search?q=how+to+delete+search+history", "https://cornhub.website", "https://emojipedia.org/moai", "https://geekprank.com/blue-death/", "https://neal.fun", "https://github.com/familycomicsstudios", ""]
+websitesToOpen = ["https://www.google.co.ck/search?q=how+to+delete+search+history", "https://cornhub.website", "https://emojipedia.org/moai", "https://geekprank.com/blue-death/", "https://neal.fun", "https://github.com/familycomicsstudios", "https://www.youtube.com/watch?v=dQw4w9WgXcQ"]
 def payload():
     # pilImage = Image.open("download.jpg")
     # showPIL(pilImage)
     minimum = 10
     while True:
-        time.sleep(random.randint(minimum, minimum * 2))
-        minumum = minimum / 2
+        time.sleep(minimum)
+        minimum = minimum / 2
         webbrowser.open(random.choice(websitesToOpen), new=2)
+        print(minimum)
 
 print("Would you like to activate a payload?")
 areYouSure = input("Type the EXACT text \"I dig you!\" to activate the payload. >")

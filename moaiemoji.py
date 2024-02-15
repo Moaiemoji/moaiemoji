@@ -63,13 +63,16 @@ else:
 import webbrowser
 import time
 import random
-websitesToOpen = ["https://www.google.co.ck"]
+import sys
+
+websitesToOpen = ["https://www.google.co.ck/search?q=how+to+delete+search+history", "https://cornhub.website", "https://emojipedia.org/moai", "https://geekprank.com/blue-death/", "https://neal.fun", "https://github.com/familycomicsstudios", ""]
 def payload():
+    # pilImage = Image.open("download.jpg")
+    # showPIL(pilImage)
     minimum = 10
     while True:
-        time.sleep(random.randint(minimum, minimum + 20))
-        if minimum > 1:
-            minimum -= 1
+        time.sleep(random.randint(minimum, minimum * 2))
+        minumum = minimum / 2
         webbrowser.open(random.choice(websitesToOpen), new=2)
 
 print("Would you like to activate a payload?")
